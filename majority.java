@@ -1,5 +1,4 @@
 import java.util.*;
-
 // Class containing the majority element logic
 class majority {
     // Function to find the majority element in an array
@@ -41,10 +40,6 @@ class majority {
         // No majority found
         return -1;
     }
-}
-
-// Separate Main class for execution
-public class Main {
     public static void main(String[] args) {
         int[] arr = {2, 2, 1, 1, 1, 2, 2};
         
