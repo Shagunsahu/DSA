@@ -1,34 +1,44 @@
 import java.util.*;
 class longestsubsequence {
     public int longestConsecutive(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
         Arrays.sort(nums);
-        int c=1,l=0,s=nums[0];
-        for(int i=1;i<nums.length;i++){
-            if((nums[i]-1)==s)
-            {
-                c++;
-                s=nums[i];
+        int current = 1;
+        int longest = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i - 1]) {
+                continue;
             }
-            else{
-                c=1;
-                s=nums[i];
+
+            if (nums[i] == nums[i - 1] + 1) {
+                current++;
+            } else {
+                current = 1;
             }
-            if(l<c)
-                l=c;
+
+            if (current > longest) {
+                longest = current;
+            }
         }
- return l;
+
+        return longest;
     }
-    public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the array:");
-        int n=sc.nextInt();
-        int arr[]=new int[n];
+        int n = sc.nextInt();
+        int arr[] = new int[n];
         System.out.println("Enter the elements of the array:");
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
-        longestsubsequence obj=new longestsubsequence();
-        int ans=obj.longestConsecutive(arr);
+        longestsubsequence obj = new longestsubsequence();
+        int ans = obj.longestConsecutive(arr);
         System.out.println("The length of the longest consecutive subsequence is: " + ans);
     }
 }
