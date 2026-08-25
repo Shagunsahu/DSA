@@ -5,14 +5,12 @@ class lssumk{
         Map<Integer, Integer> mpp = new HashMap<>();
         for(int i=0;i<nums.length;i++){
             sum+=nums[i];
-            if(sum==k)
-            m=i+1;
-            else{
-                if(mpp.containsKey(sum))
-                m=Math.max(m,i-mpp.get(sum));
+            
+                if(mpp.containsKey(sum-k))
+                m=Math.max(m,i-mpp.get(sum-k));
                 else 
                 mpp.put(sum,i);
-            }
+            
         }
        return m;
 
