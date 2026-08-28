@@ -7,7 +7,13 @@ class matrixmedian {
        return matrix[r][c];
     }
     public static void main(String args[]){
-        int[][] matrix={{1,3,5},{2,6,9},{3,6,9}};
+        int[][] matrix=new int[10][10];
+        System.out.println("Enter the elements of the matrix: ");
+        for(int i=0;i<10;i++){
+            for(int j=0;j<10;j++){
+                matrix[i][j]=Integer.parseInt(System.console().readLine());
+            }
+        }
         matrixmedian obj=new matrixmedian();
         int ans=obj.findMedian(matrix);
         System.out.println("The median of the matrix is: "+ans);
