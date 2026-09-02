@@ -1,4 +1,4 @@
-class Solution {
+class stock {
     public int stockBuySell(int[] arr, int n) {
          int min = Integer.MAX_VALUE;
        int max=0;

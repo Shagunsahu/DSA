@@ -43,8 +43,8 @@ int matrix[][]=new int[r][r];
             for (int j=0;j<r;j++)
              matrix[i][j]=sc.nextInt();
         }
-        Solution obj = new Solution();
-        obj.rotateClockwise(matrix);
+        Solution ob = new Solution();
+        ob.rotateClockwise(matrix);
 
         // Print rotated matrix
         for (int[] row : matrix) {
