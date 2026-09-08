@@ -45,16 +45,13 @@ class water {
     }
 
     public static void main(String[] args) {
-        // Input elevation map
+        
         int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};
         
-        // Create Solution object
+        
         water sol = new water();
         
-        // Calculate trapped water
         int result = sol.trap(height);
-        
-        // Print the result
         System.out.println("Trapped Rainwater: " + result);
     }
 }
