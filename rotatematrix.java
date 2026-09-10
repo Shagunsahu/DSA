@@ -44,7 +44,7 @@ int matrix[][]=new int[r][r];
              matrix[i][j]=sc.nextInt();
         }
         Solution ob = new Solution();
-        ob.rotateClockwise(matrix);// object creation
+        ob.rotateClockwise(matrix);
 
         // Print rotated matrix
         for (int[] row : matrix) {
