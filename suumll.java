@@ -40,7 +40,7 @@ class suumll {
         suumll solution = new suumll();
         ListNode result = solution.addTwoNumbers(l1, l2);
 
-        // Print the result
+
         while (result != null) {
             System.out.print(result.data + " ");
             result = result.next;
