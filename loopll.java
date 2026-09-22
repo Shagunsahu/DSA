@@ -63,7 +63,7 @@ class loopll{
 
     // Driver code.
     public static void main(String[] args) {
-        Scanner sc = new java.util.Scanner(System.in);
+        Scanner sc = new java.util.Scanner(System.in);//object
         int n = sc.nextInt();
         int[] values = new int[n];
         System.out.println("Enter the values for the linked list:");
