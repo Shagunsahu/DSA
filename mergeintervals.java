@@ -20,7 +20,7 @@ class mergeintervals{
             }
         }
 
-        merged.add(prev); // Add the last interval
+        merged.add(prev);
         return merged.toArray(new int[merged.size()][]);
     }
     public static void main(String args[]){
